@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-
 const { port } = require('../config');
 
 const app = require('../app');
 const db = require('../db/models');
 
 // Check the database connection before starting the app.
+
 db.sequelize.authenticate()
   .then(() => {
     console.log('Database connection success! Sequelize is ready to use...');
